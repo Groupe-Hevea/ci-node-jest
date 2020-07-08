@@ -1,0 +1,11 @@
+name: 'CI NODE JEST'
+description: 'Run Jest Unit Tests'
+runs:
+  using: 'docker'
+  image: 'docker://node:10'
+  entrypoint: "/bin/bash"
+  args:
+    - -c
+    - |
+      npm install jest
+      npx jest
